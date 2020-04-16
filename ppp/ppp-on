@@ -1,0 +1,80 @@
+#!/bin/bash 
+
+# delete default gateway every time dial up
+#route del default gw 0.0.0.0
+#rm /var/lock/LCK..ttymxc5
+
+LOCAL_IP=0.0.0.0	
+REMOTE_IP=0.0.0.0
+NETMASK=255.255.255.0	
+TELEPHONE=*99***1#	
+ACCOUNT=
+PASSWORD=
+APN=cmmtm
+AUTH=$5
+
+
+if [ ! -z $1 ]; then
+    APN="\"$1"\"
+fi
+
+if [ ! -z $2 ]; then
+    ACCOUNT=$2
+fi
+
+if [ ! -z $3 ]; then
+    PASSWORD=$3
+fi
+
+if [ ! -z $4 ]; then
+    TELEPHONE=$4
+fi
+
+# export TELEPHONE ACCOUNT PASSWORD APN
+
+# APN="CMNET"
+# TELEPHONE="*99*1#"
+export TELEPHONE ACCOUNT PASSWORD APN
+
+# echo "TELEPHONE=" $TELEPHONE
+# echo "ACCOUNT=" $ACCOUNT
+# echo "PASSWORD=" $PASSWORD
+# echo "APN=" $APN
+
+# rm  /var/lock/LCK..ttymxc5
+#如果使用参数 后面的APN 使用$APN
+#如果不使用传递的形式 使用\"$APN\" 
+
+
+SHELL_FOLDER=$(dirname $(readlink -f "$0"))
+DIALER_SCRIPT=$SHELL_FOLDER/ppp-on-dialer
+LOGFILE=$SHELL_FOLDER/ppplog
+
+
+
+#exec /usr/sbin/pppd debug lock modem nocrtscts /dev/ttymxc5 115200 ipcp-accept-local ipcp-accept-remote noauth user $ACCOUNT password $PASSWORD usepeerdns asyncmap 20A0000 escape FF kdebug 0 $LOCAL_IP:$REMOTE_IP   noipdefault netmask $NETMASK defaultroute connect $DIALER_SCRIPT
+exec pppd                                              \
+hide-password                                                    \
+logfile $LOGFILE                                                  \
+noauth                                                           \
+connect $DIALER_SCRIPT                                           \
+debug                                                            \
+/dev/ttymxc5                                                     \
+115200                                                           \
+refuse-chap                                                      \
+refuse-mschap                                                    \
+refuse-mschap-v2                                                 \
+defaultroute                                                     \
+noipdefault                                                      \
+novj                                                             \
+novjccomp                                                        \
+noccp                                                            \
+ipcp-accept-local                                                \
+ipcp-accept-remote                                               \
+local                                                            \
+dump                                                             \
+nodetach                                                         \
+remotename 3gppp                                                 \
+ipparam 3gppp                                                    \
+usepeerdns                                                       \
+

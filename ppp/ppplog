@@ -1,0 +1,2639 @@
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /work/mydemo/10-gprs-check/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /work/mydemo/10-gprs-check/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+timeout set to 15 seconds
+abort on (DELAYED)
+abort on (BUSY)
+abort on (ERROR)
+abort on (NO DIALTONE)
+abort on (NO CARRIER)
+timeout set to 15 seconds
+send (rAT^M)
+expect (OK)
+^M
+
+OKOK
+ -- got it
+
+send (ATS0=0^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATE0V1^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGDCONT=1,"IP","internet"^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGEQREQ=1,2,128,384,,,0,,,,,,^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATDT*99***1#^M)
+expect (CONNECT)
+^M
+
+^M
+
+CONNECTCONNECT
+ -- got it
+
+Script /work/mydemo/10-gprs-check/ppp/ppp-on-dialer finished (pid 377), status = 0x0
+Serial connection established.
+using channel 3
+Using interface ppp0
+Connect: ppp0 <--> /dev/ttymxc5
+sent [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x2e492778> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x6 <asyncmap 0x0> <auth chap MD5> <magic 0x21351ea> <pcomp> <accomp>]
+No auth is possible
+sent [LCP ConfRej id=0x6 <auth chap MD5>]
+rcvd [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x2e492778> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x7 <asyncmap 0x0> <magic 0x21351ea> <pcomp> <accomp>]
+sent [LCP ConfAck id=0x7 <asyncmap 0x0> <magic 0x21351ea> <pcomp> <accomp>]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [LCP DiscReq id=0x8 magic=0x21351ea]
+rcvd [IPCP ConfReq id=0x4]
+sent [IPCP ConfNak id=0x4 <addr 0.0.0.0>]
+rcvd [IPCP ConfNak id=0x1 <addr 10.32.135.242> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+sent [IPCP ConfReq id=0x2 <addr 10.32.135.242> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+rcvd [IPCP ConfReq id=0x5]
+sent [IPCP ConfAck id=0x5]
+rcvd [IPCP ConfAck id=0x2 <addr 10.32.135.242> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+Could not determine remote IP address: defaulting to 10.64.64.64
+not replacing existing default route via 192.168.1.1
+local  IP address 10.32.135.242
+remote IP address 10.64.64.64
+primary   DNS address 211.136.17.107
+secondary DNS address 211.136.20.203
+Terminating on signal 2
+Connect time 0.4 minutes.
+Sent 0 bytes, received 0 bytes.
+sent [LCP TermReq id=0x2 "User request"]
+rcvd [LCP TermAck id=0x2]
+Connection terminated.
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /work/mydemo/10-gprs-check/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /work/mydemo/10-gprs-check/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+timeout set to 15 seconds
+abort on (DELAYED)
+abort on (BUSY)
+abort on (ERROR)
+abort on (NO DIALTONE)
+abort on (NO CARRIER)
+timeout set to 15 seconds
+send (rAT^M)
+expect (OK)
+^M
+
+OKOK
+ -- got it
+
+send (ATS0=0^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATE0V1^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGDCONT=1,"IP","internet"^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGEQREQ=1,2,128,384,,,0,,,,,,^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATDT*99***1#^M)
+expect (CONNECT)
+^M
+
+^M
+
+CONNECTCONNECT
+ -- got it
+
+Script /work/mydemo/10-gprs-check/ppp/ppp-on-dialer finished (pid 398), status = 0x0
+Serial connection established.
+using channel 4
+Using interface ppp0
+Connect: ppp0 <--> /dev/ttymxc5
+sent [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x6aaa3f91> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x9 <asyncmap 0x0> <auth chap MD5> <magic 0x2199f27> <pcomp> <accomp>]
+No auth is possible
+sent [LCP ConfRej id=0x9 <auth chap MD5>]
+rcvd [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x6aaa3f91> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0xa <asyncmap 0x0> <magic 0x2199f27> <pcomp> <accomp>]
+sent [LCP ConfAck id=0xa <asyncmap 0x0> <magic 0x2199f27> <pcomp> <accomp>]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [LCP DiscReq id=0xb magic=0x2199f27]
+rcvd [IPCP ConfReq id=0x6]
+sent [IPCP ConfNak id=0x6 <addr 0.0.0.0>]
+rcvd [IPCP ConfNak id=0x1 <addr 10.49.194.164> <ms-dns1 183.230.126.225> <ms-dns2 183.230.126.224>]
+sent [IPCP ConfReq id=0x2 <addr 10.49.194.164> <ms-dns1 183.230.126.225> <ms-dns2 183.230.126.224>]
+rcvd [IPCP ConfReq id=0x7]
+sent [IPCP ConfAck id=0x7]
+rcvd [IPCP ConfAck id=0x2 <addr 10.49.194.164> <ms-dns1 183.230.126.225> <ms-dns2 183.230.126.224>]
+Could not determine remote IP address: defaulting to 10.64.64.64
+not replacing existing default route via 192.168.1.1
+local  IP address 10.49.194.164
+remote IP address 10.64.64.64
+primary   DNS address 183.230.126.225
+secondary DNS address 183.230.126.224
+Terminating on signal 15
+Connect time 0.8 minutes.
+Sent 0 bytes, received 0 bytes.
+sent [LCP TermReq id=0x2 "User request"]
+rcvd [LCP TermAck id=0x2]
+Connection terminated.
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /work/mydemo/10-gprs-check/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /work/mydemo/10-gprs-check/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+timeout set to 15 seconds
+abort on (DELAYED)
+abort on (BUSY)
+abort on (ERROR)
+abort on (NO DIALTONE)
+abort on (NO CARRIER)
+timeout set to 15 seconds
+send (rAT^M)
+expect (OK)
+^M
+
+OKOK
+ -- got it
+
+send (ATS0=0^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATE0V1^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGDCONT=1,"IP","internet"^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGEQREQ=1,2,128,384,,,0,,,,,,^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATDT*99***1#^M)
+expect (CONNECT)
+^M
+
+^M
+
+CONNECTCONNECT
+ -- got it
+
+Script /work/mydemo/10-gprs-check/ppp/ppp-on-dialer finished (pid 417), status = 0x0
+Serial connection established.
+using channel 5
+Using interface ppp0
+Connect: ppp0 <--> /dev/ttymxc5
+sent [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0xbc421cff> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0xc <asyncmap 0x0> <auth chap MD5> <magic 0x21b3132> <pcomp> <accomp>]
+No auth is possible
+sent [LCP ConfRej id=0xc <auth chap MD5>]
+rcvd [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0xbc421cff> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0xd <asyncmap 0x0> <magic 0x21b3132> <pcomp> <accomp>]
+sent [LCP ConfAck id=0xd <asyncmap 0x0> <magic 0x21b3132> <pcomp> <accomp>]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [LCP DiscReq id=0xe magic=0x21b3132]
+rcvd [IPCP ConfReq id=0x8]
+sent [IPCP ConfNak id=0x8 <addr 0.0.0.0>]
+rcvd [IPCP ConfNak id=0x1 <addr 10.136.209.59> <ms-dns1 183.230.126.225> <ms-dns2 183.230.126.224>]
+sent [IPCP ConfReq id=0x2 <addr 10.136.209.59> <ms-dns1 183.230.126.225> <ms-dns2 183.230.126.224>]
+rcvd [IPCP ConfReq id=0x9]
+sent [IPCP ConfAck id=0x9]
+rcvd [IPCP ConfAck id=0x2 <addr 10.136.209.59> <ms-dns1 183.230.126.225> <ms-dns2 183.230.126.224>]
+Could not determine remote IP address: defaulting to 10.64.64.64
+not replacing existing default route via 192.168.1.1
+local  IP address 10.136.209.59
+remote IP address 10.64.64.64
+primary   DNS address 183.230.126.225
+secondary DNS address 183.230.126.224
+Terminating on signal 15
+Connect time 4.3 minutes.
+Sent 0 bytes, received 0 bytes.
+sent [LCP TermReq id=0x2 "User request"]
+rcvd [LCP TermAck id=0x2]
+Connection terminated.
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /work/mydemo/10-gprs-check/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /work/mydemo/10-gprs-check/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+timeout set to 15 seconds
+abort on (DELAYED)
+abort on (BUSY)
+abort on (ERROR)
+abort on (NO DIALTONE)
+abort on (NO CARRIER)
+timeout set to 15 seconds
+send (rAT^M)
+expect (OK)
+^M
+
+OKOK
+ -- got it
+
+send (ATS0=0^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATE0V1^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGDCONT=1,"IP","internet"^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGEQREQ=1,2,128,384,,,0,,,,,,^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATDT*99***1#^M)
+expect (CONNECT)
+^M
+
+^M
+
+CONNECTCONNECT
+ -- got it
+
+Script /work/mydemo/10-gprs-check/ppp/ppp-on-dialer finished (pid 438), status = 0x0
+Serial connection established.
+using channel 6
+Using interface ppp0
+Connect: ppp0 <--> /dev/ttymxc5
+sent [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0xa335de8> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0xf <asyncmap 0x0> <auth chap MD5> <magic 0x21f3685> <pcomp> <accomp>]
+No auth is possible
+sent [LCP ConfRej id=0xf <auth chap MD5>]
+rcvd [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0xa335de8> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x10 <asyncmap 0x0> <magic 0x21f3685> <pcomp> <accomp>]
+sent [LCP ConfAck id=0x10 <asyncmap 0x0> <magic 0x21f3685> <pcomp> <accomp>]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [LCP DiscReq id=0x11 magic=0x21f3685]
+rcvd [IPCP ConfReq id=0xa]
+sent [IPCP ConfNak id=0xa <addr 0.0.0.0>]
+rcvd [IPCP ConfNak id=0x1 <addr 10.160.181.186> <ms-dns1 183.230.126.225> <ms-dns2 183.230.126.224>]
+sent [IPCP ConfReq id=0x2 <addr 10.160.181.186> <ms-dns1 183.230.126.225> <ms-dns2 183.230.126.224>]
+rcvd [IPCP ConfReq id=0xb]
+sent [IPCP ConfAck id=0xb]
+rcvd [IPCP ConfAck id=0x2 <addr 10.160.181.186> <ms-dns1 183.230.126.225> <ms-dns2 183.230.126.224>]
+Could not determine remote IP address: defaulting to 10.64.64.64
+not replacing existing default route via 192.168.1.1
+local  IP address 10.160.181.186
+remote IP address 10.64.64.64
+primary   DNS address 183.230.126.225
+secondary DNS address 183.230.126.224
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /work/mydemo/10-gprs-check/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /work/mydemo/10-gprs-check/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+timeout set to 15 seconds
+abort on (DELAYED)
+abort on (BUSY)
+abort on (ERROR)
+abort on (NO DIALTONE)
+abort on (NO CARRIER)
+timeout set to 15 seconds
+send (rAT^M)
+expect (OK)
+ATAT^M^M
+
+OKOK
+ -- got it
+
+send (ATS0=0^M)
+expect (OK)
+^M
+
+ATS0=0ATS0=0^M^M
+
+OKOK
+ -- got it
+
+send (ATE0V1^M)
+expect (OK)
+^M
+
+ATE0V1ATE0V1^M^M
+
+OKOK
+ -- got it
+
+send (AT+CGDCONT=1,"IP","internet"^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGEQREQ=1,2,128,384,,,0,,,,,,^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATDT*99***1#^M)
+expect (CONNECT)
+^M
+
+^M
+
+CONNECTCONNECT
+ -- got it
+
+Script /work/mydemo/10-gprs-check/ppp/ppp-on-dialer finished (pid 396), status = 0x0
+Serial connection established.
+using channel 1
+Using interface ppp0
+Connect: ppp0 <--> /dev/ttymxc5
+sent [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x581fac1> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x0 <asyncmap 0x0> <auth chap MD5> <magic 0x29d40b6> <pcomp> <accomp>]
+No auth is possible
+sent [LCP ConfRej id=0x0 <auth chap MD5>]
+rcvd [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x581fac1> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x29d40b6> <pcomp> <accomp>]
+sent [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x29d40b6> <pcomp> <accomp>]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [LCP DiscReq id=0x2 magic=0x29d40b6]
+rcvd [proto=0x3] 01 00 04
+Unsupported protocol 0x3 received
+sent [LCP ProtRej id=0x2 00 03 01 00 04]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [proto=0x3] 01 00 04
+Unsupported protocol 0x3 received
+sent [LCP ProtRej id=0x3 00 03 01 00 04]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [proto=0x3] 01 00 04
+Unsupported protocol 0x3 received
+sent [LCP ProtRej id=0x4 00 03 01 00 04]
+rcvd [IPCP ConfReq id=0x0]
+sent [IPCP ConfNak id=0x0 <addr 0.0.0.0>]
+rcvd [IPCP ConfNak id=0x1 <addr 10.146.193.81> <ms-dns1 183.230.126.225> <ms-dns2 183.230.126.224>]
+sent [IPCP ConfReq id=0x2 <addr 10.146.193.81> <ms-dns1 183.230.126.225> <ms-dns2 183.230.126.224>]
+rcvd [IPCP ConfReq id=0x1]
+sent [IPCP ConfAck id=0x1]
+rcvd [IPCP ConfAck id=0x2 <addr 10.146.193.81> <ms-dns1 183.230.126.225> <ms-dns2 183.230.126.224>]
+Could not determine remote IP address: defaulting to 10.64.64.64
+not replacing existing default route via 192.168.1.1
+local  IP address 10.146.193.81
+remote IP address 10.64.64.64
+primary   DNS address 183.230.126.225
+secondary DNS address 183.230.126.224
+Terminating on signal 15
+Connect time 0.2 minutes.
+Sent 0 bytes, received 0 bytes.
+sent [LCP TermReq id=0x5 "User request"]
+rcvd [LCP TermAck id=0x5]
+Connection terminated.
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /work/mydemo/10-gprs-check/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /work/mydemo/10-gprs-check/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+timeout set to 15 seconds
+abort on (DELAYED)
+abort on (BUSY)
+abort on (ERROR)
+abort on (NO DIALTONE)
+abort on (NO CARRIER)
+timeout set to 15 seconds
+send (rAT^M)
+expect (OK)
+^M
+
+OKOK
+ -- got it
+
+send (ATS0=0^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATE0V1^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGDCONT=1,"IP","internet"^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGEQREQ=1,2,128,384,,,0,,,,,,^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATDT*99***1#^M)
+expect (CONNECT)
+^M
+
+^M
+
+CONNECTCONNECT
+ -- got it
+
+Script /work/mydemo/10-gprs-check/ppp/ppp-on-dialer finished (pid 412), status = 0x0
+Serial connection established.
+using channel 2
+Using interface ppp0
+Connect: ppp0 <--> /dev/ttymxc5
+sent [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0xb2ec1a70> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x3 <asyncmap 0x0> <auth chap MD5> <magic 0x29e75e9> <pcomp> <accomp>]
+No auth is possible
+sent [LCP ConfRej id=0x3 <auth chap MD5>]
+rcvd [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0xb2ec1a70> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x4 <asyncmap 0x0> <magic 0x29e75e9> <pcomp> <accomp>]
+sent [LCP ConfAck id=0x4 <asyncmap 0x0> <magic 0x29e75e9> <pcomp> <accomp>]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [LCP DiscReq id=0x5 magic=0x29e75e9]
+rcvd [IPCP ConfReq id=0x2]
+sent [IPCP ConfNak id=0x2 <addr 0.0.0.0>]
+rcvd [IPCP ConfNak id=0x1 <addr 10.0.36.93> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+sent [IPCP ConfReq id=0x2 <addr 10.0.36.93> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+rcvd [IPCP ConfReq id=0x3]
+sent [IPCP ConfAck id=0x3]
+rcvd [IPCP ConfAck id=0x2 <addr 10.0.36.93> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+Could not determine remote IP address: defaulting to 10.64.64.64
+not replacing existing default route via 192.168.1.1
+local  IP address 10.0.36.93
+remote IP address 10.64.64.64
+primary   DNS address 211.136.17.107
+secondary DNS address 211.136.20.203
+Terminating on signal 15
+Connect time 0.1 minutes.
+Sent 0 bytes, received 0 bytes.
+sent [LCP TermReq id=0x2 "User request"]
+rcvd [LCP TermAck id=0x2]
+Connection terminated.
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /work/mydemo/10-gprs-check/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /work/mydemo/10-gprs-check/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+timeout set to 15 seconds
+abort on (DELAYED)
+abort on (BUSY)
+abort on (ERROR)
+abort on (NO DIALTONE)
+abort on (NO CARRIER)
+timeout set to 15 seconds
+send (rAT^M)
+expect (OK)
+^M
+
+OKOK
+ -- got it
+
+send (ATS0=0^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATE0V1^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGDCONT=1,"IP","internet"^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGEQREQ=1,2,128,384,,,0,,,,,,^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATDT*99***1#^M)
+expect (CONNECT)
+^M
+
+^M
+
+CONNECTCONNECT
+ -- got it
+
+Script /work/mydemo/10-gprs-check/ppp/ppp-on-dialer finished (pid 432), status = 0x0
+Serial connection established.
+using channel 3
+Using interface ppp0
+Connect: ppp0 <--> /dev/ttymxc5
+sent [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x54ffeb15> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x6 <asyncmap 0x0> <auth chap MD5> <magic 0x29efad7> <pcomp> <accomp>]
+No auth is possible
+sent [LCP ConfRej id=0x6 <auth chap MD5>]
+rcvd [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x54ffeb15> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x7 <asyncmap 0x0> <magic 0x29efad7> <pcomp> <accomp>]
+sent [LCP ConfAck id=0x7 <asyncmap 0x0> <magic 0x29efad7> <pcomp> <accomp>]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [LCP DiscReq id=0x8 magic=0x29efad7]
+rcvd [proto=0x3] 01 00 04
+Unsupported protocol 0x3 received
+sent [LCP ProtRej id=0x2 00 03 01 00 04]
+rcvd [IPCP ConfReq id=0x4]
+sent [IPCP ConfNak id=0x4 <addr 0.0.0.0>]
+rcvd [IPCP ConfNak id=0x1 <addr 10.174.230.132> <ms-dns1 183.230.126.225> <ms-dns2 183.230.126.224>]
+sent [IPCP ConfReq id=0x2 <addr 10.174.230.132> <ms-dns1 183.230.126.225> <ms-dns2 183.230.126.224>]
+rcvd [IPCP ConfReq id=0x5]
+sent [IPCP ConfAck id=0x5]
+rcvd [IPCP ConfAck id=0x2 <addr 10.174.230.132> <ms-dns1 183.230.126.225> <ms-dns2 183.230.126.224>]
+Could not determine remote IP address: defaulting to 10.64.64.64
+not replacing existing default route via 192.168.1.1
+local  IP address 10.174.230.132
+remote IP address 10.64.64.64
+primary   DNS address 183.230.126.225
+secondary DNS address 183.230.126.224
+Terminating on signal 15
+Connect time 1.5 minutes.
+Sent 0 bytes, received 0 bytes.
+sent [LCP TermReq id=0x3 "User request"]
+rcvd [LCP TermAck id=0x3]
+Connection terminated.
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /work/mydemo/10-gprs-check/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /work/mydemo/10-gprs-check/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+timeout set to 15 seconds
+abort on (DELAYED)
+abort on (BUSY)
+abort on (ERROR)
+abort on (NO DIALTONE)
+abort on (NO CARRIER)
+timeout set to 15 seconds
+send (rAT^M)
+expect (OK)
+^M
+
+OKOK
+ -- got it
+
+send (ATS0=0^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATE0V1^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGDCONT=1,"IP","internet"^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGEQREQ=1,2,128,384,,,0,,,,,,^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATDT*99***1#^M)
+expect (CONNECT)
+^M
+
+^M
+
+CONNECTCONNECT
+ -- got it
+
+Script /work/mydemo/10-gprs-check/ppp/ppp-on-dialer finished (pid 448), status = 0x0
+Serial connection established.
+using channel 4
+Using interface ppp0
+Connect: ppp0 <--> /dev/ttymxc5
+sent [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0xd14790b9> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x9 <asyncmap 0x0> <auth chap MD5> <magic 0x2a07ac4> <pcomp> <accomp>]
+No auth is possible
+sent [LCP ConfRej id=0x9 <auth chap MD5>]
+rcvd [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0xd14790b9> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0xa <asyncmap 0x0> <magic 0x2a07ac4> <pcomp> <accomp>]
+sent [LCP ConfAck id=0xa <asyncmap 0x0> <magic 0x2a07ac4> <pcomp> <accomp>]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [LCP DiscReq id=0xb magic=0x2a07ac4]
+rcvd [proto=0x3] 01 00 04
+Unsupported protocol 0x3 received
+sent [LCP ProtRej id=0x2 00 03 01 00 04]
+rcvd [IPCP ConfReq id=0x6]
+sent [IPCP ConfNak id=0x6 <addr 0.0.0.0>]
+rcvd [IPCP ConfNak id=0x1 <addr 10.153.110.98> <ms-dns1 120.196.165.7> <ms-dns2 221.179.38.7>]
+sent [IPCP ConfReq id=0x2 <addr 10.153.110.98> <ms-dns1 120.196.165.7> <ms-dns2 221.179.38.7>]
+rcvd [IPCP ConfReq id=0x7]
+sent [IPCP ConfAck id=0x7]
+rcvd [IPCP ConfAck id=0x2 <addr 10.153.110.98> <ms-dns1 120.196.165.7> <ms-dns2 221.179.38.7>]
+Could not determine remote IP address: defaulting to 10.64.64.64
+not replacing existing default route via 192.168.1.1
+local  IP address 10.153.110.98
+remote IP address 10.64.64.64
+primary   DNS address 120.196.165.7
+secondary DNS address 221.179.38.7
+Terminating on signal 2
+Connect time 0.6 minutes.
+Sent 0 bytes, received 0 bytes.
+sent [LCP TermReq id=0x3 "User request"]
+rcvd [LCP TermAck id=0x3]
+Connection terminated.
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /work/mydemo/10-gprs-check/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /work/mydemo/10-gprs-check/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+timeout set to 15 seconds
+abort on (DELAYED)
+abort on (BUSY)
+abort on (ERROR)
+abort on (NO DIALTONE)
+abort on (NO CARRIER)
+timeout set to 15 seconds
+send (rAT^M)
+expect (OK)
+^M
+
+OKOK
+ -- got it
+
+send (ATS0=0^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATE0V1^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGDCONT=1,"IP","internet"^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGEQREQ=1,2,128,384,,,0,,,,,,^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATDT*99***1#^M)
+expect (CONNECT)
+^M
+
+^M
+
+CONNECTCONNECT
+ -- got it
+
+Script /work/mydemo/10-gprs-check/ppp/ppp-on-dialer finished (pid 465), status = 0x0
+Serial connection established.
+using channel 5
+Using interface ppp0
+Connect: ppp0 <--> /dev/ttymxc5
+sent [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x9ef009b7> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0xc <asyncmap 0x0> <auth chap MD5> <magic 0x2a1f9b8> <pcomp> <accomp>]
+No auth is possible
+sent [LCP ConfRej id=0xc <auth chap MD5>]
+rcvd [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x9ef009b7> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0xd <asyncmap 0x0> <magic 0x2a1f9b8> <pcomp> <accomp>]
+sent [LCP ConfAck id=0xd <asyncmap 0x0> <magic 0x2a1f9b8> <pcomp> <accomp>]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [LCP DiscReq id=0xe magic=0x2a1f9b8]
+rcvd [IPCP ConfReq id=0x8]
+sent [IPCP ConfNak id=0x8 <addr 0.0.0.0>]
+rcvd [IPCP ConfNak id=0x1 <addr 10.3.226.228> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+sent [IPCP ConfReq id=0x2 <addr 10.3.226.228> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+rcvd [IPCP ConfReq id=0x9]
+sent [IPCP ConfAck id=0x9]
+rcvd [IPCP ConfAck id=0x2 <addr 10.3.226.228> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+Could not determine remote IP address: defaulting to 10.64.64.64
+not replacing existing default route via 192.168.1.1
+local  IP address 10.3.226.228
+remote IP address 10.64.64.64
+primary   DNS address 211.136.17.107
+secondary DNS address 211.136.20.203
+Terminating on signal 15
+Connect time 24.6 minutes.
+Sent 0 bytes, received 0 bytes.
+sent [LCP TermReq id=0x2 "User request"]
+sent [LCP TermReq id=0x3 "User request"]
+Connection terminated.
+Modem hangup
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /work/mydemo/10-gprs-check/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /work/mydemo/10-gprs-check/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+timeout set to 15 seconds
+abort on (DELAYED)
+abort on (BUSY)
+abort on (ERROR)
+abort on (NO DIALTONE)
+abort on (NO CARRIER)
+timeout set to 15 seconds
+send (rAT^M)
+expect (OK)
+ATAT^M^M
+
+OKOK
+ -- got it
+
+send (ATS0=0^M)
+expect (OK)
+^M
+
+ATS0=0ATS0=0^M^M
+
+OKOK
+ -- got it
+
+send (ATE0V1^M)
+expect (OK)
+^M
+
+ATE0V1ATE0V1^M^M
+
+OKOK
+ -- got it
+
+send (AT+CGDCONT=1,"IP","internet"^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGEQREQ=1,2,128,384,,,0,,,,,,^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATDT*99***1#^M)
+expect (CONNECT)
+^M
+
+^M
+
+CONNECTCONNECT
+ -- got it
+
+Script /work/mydemo/10-gprs-check/ppp/ppp-on-dialer finished (pid 622), status = 0x0
+Serial connection established.
+using channel 6
+Using interface ppp0
+Connect: ppp0 <--> /dev/ttymxc5
+sent [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x943493ba> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x0 <asyncmap 0x0> <auth chap MD5> <magic 0x19f76eb> <pcomp> <accomp>]
+No auth is possible
+sent [LCP ConfRej id=0x0 <auth chap MD5>]
+rcvd [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x943493ba> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x19f76eb> <pcomp> <accomp>]
+sent [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x19f76eb> <pcomp> <accomp>]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [LCP DiscReq id=0x2 magic=0x19f76eb]
+rcvd [IPCP ConfReq id=0x0]
+sent [IPCP ConfNak id=0x0 <addr 0.0.0.0>]
+rcvd [IPCP ConfNak id=0x1 <addr 10.62.11.156> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+sent [IPCP ConfReq id=0x2 <addr 10.62.11.156> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+rcvd [IPCP ConfReq id=0x1]
+sent [IPCP ConfAck id=0x1]
+rcvd [IPCP ConfAck id=0x2 <addr 10.62.11.156> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+Could not determine remote IP address: defaulting to 10.64.64.64
+not replacing existing default route via 192.168.1.1
+local  IP address 10.62.11.156
+remote IP address 10.64.64.64
+primary   DNS address 211.136.17.107
+secondary DNS address 211.136.20.203
+Terminating on signal 15
+Connect time 17.3 minutes.
+Sent 0 bytes, received 0 bytes.
+sent [LCP TermReq id=0x2 "User request"]
+rcvd [LCP TermAck id=0x2]
+Connection terminated.
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /work/mydemo/10-gprs-check/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /work/mydemo/10-gprs-check/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+timeout set to 15 seconds
+abort on (DELAYED)
+abort on (BUSY)
+abort on (ERROR)
+abort on (NO DIALTONE)
+abort on (NO CARRIER)
+timeout set to 15 seconds
+send (rAT^M)
+expect (OK)
+ATAT^M^M
+
+OKOK
+ -- got it
+
+send (ATS0=0^M)
+expect (OK)
+^M
+
+ATS0=0ATS0=0^M^M
+
+OKOK
+ -- got it
+
+send (ATE0V1^M)
+expect (OK)
+^M
+
+ATE0V1ATE0V1^M^M
+
+OKOK
+ -- got it
+
+send (AT+CGDCONT=1,"IP","internet"^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGEQREQ=1,2,128,384,,,0,,,,,,^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATDT*99***1#^M)
+expect (CONNECT)
+^M
+
+^M
+
+CONNECTCONNECT
+ -- got it
+
+Script /work/mydemo/10-gprs-check/ppp/ppp-on-dialer finished (pid 678), status = 0x0
+Serial connection established.
+using channel 7
+Using interface ppp0
+Connect: ppp0 <--> /dev/ttymxc5
+sent [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0xac92426f> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x0 <asyncmap 0x0> <auth chap MD5> <magic 0x1b0d2b1> <pcomp> <accomp>]
+No auth is possible
+sent [LCP ConfRej id=0x0 <auth chap MD5>]
+rcvd [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0xac92426f> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x1b0d2b1> <pcomp> <accomp>]
+sent [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x1b0d2b1> <pcomp> <accomp>]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [LCP DiscReq id=0x2 magic=0x1b0d2b1]
+rcvd [proto=0x3] 01 00 04
+Unsupported protocol 0x3 received
+sent [LCP ProtRej id=0x2 00 03 01 00 04]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [proto=0x3] 01 00 04
+Unsupported protocol 0x3 received
+sent [LCP ProtRej id=0x3 00 03 01 00 04]
+rcvd [IPCP ConfReq id=0x0]
+sent [IPCP ConfNak id=0x0 <addr 0.0.0.0>]
+rcvd [IPCP ConfNak id=0x1 <addr 10.158.200.95> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+sent [IPCP ConfReq id=0x2 <addr 10.158.200.95> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+rcvd [IPCP ConfReq id=0x1]
+sent [IPCP ConfAck id=0x1]
+rcvd [IPCP ConfAck id=0x2 <addr 10.158.200.95> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+Could not determine remote IP address: defaulting to 10.64.64.64
+not replacing existing default route via 192.168.1.1
+local  IP address 10.158.200.95
+remote IP address 10.64.64.64
+primary   DNS address 211.136.17.107
+secondary DNS address 211.136.20.203
+Terminating on signal 15
+Connect time 1.8 minutes.
+Sent 0 bytes, received 0 bytes.
+sent [LCP TermReq id=0x4 "User request"]
+rcvd [LCP TermAck id=0x4]
+Connection terminated.
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /work/mydemo/10-gprs-check/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /work/mydemo/10-gprs-check/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+timeout set to 15 seconds
+abort on (DELAYED)
+abort on (BUSY)
+abort on (ERROR)
+abort on (NO DIALTONE)
+abort on (NO CARRIER)
+timeout set to 15 seconds
+send (rAT^M)
+expect (OK)
+ATAT^M^M
+
+OKOK
+ -- got it
+
+send (ATS0=0^M)
+expect (OK)
+^M
+
+ATS0=0ATS0=0^M^M
+
+OKOK
+ -- got it
+
+send (ATE0V1^M)
+expect (OK)
+^M
+
+ATE0V1ATE0V1^M^M
+
+OKOK
+ -- got it
+
+send (AT+CGDCONT=1,"IP","internet"^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGEQREQ=1,2,128,384,,,0,,,,,,^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATDT*99***1#^M)
+expect (CONNECT)
+^M
+
+^M
+
+CONNECTCONNECT
+ -- got it
+
+Script /work/mydemo/10-gprs-check/ppp/ppp-on-dialer finished (pid 702), status = 0x0
+Serial connection established.
+using channel 8
+Using interface ppp0
+Connect: ppp0 <--> /dev/ttymxc5
+sent [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x5239d43f> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x0 <asyncmap 0x0> <auth chap MD5> <magic 0x1b2e250> <pcomp> <accomp>]
+No auth is possible
+sent [LCP ConfRej id=0x0 <auth chap MD5>]
+rcvd [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x5239d43f> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x1b2e250> <pcomp> <accomp>]
+sent [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x1b2e250> <pcomp> <accomp>]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [LCP DiscReq id=0x2 magic=0x1b2e250]
+rcvd [proto=0x3] 01 00 04
+Unsupported protocol 0x3 received
+sent [LCP ProtRej id=0x2 00 03 01 00 04]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [proto=0x3] 01 00 04
+Unsupported protocol 0x3 received
+sent [LCP ProtRej id=0x3 00 03 01 00 04]
+rcvd [IPCP ConfReq id=0x0]
+sent [IPCP ConfNak id=0x0 <addr 0.0.0.0>]
+rcvd [IPCP ConfNak id=0x1 <addr 10.100.84.189> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+sent [IPCP ConfReq id=0x2 <addr 10.100.84.189> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+rcvd [IPCP ConfReq id=0x1]
+sent [IPCP ConfAck id=0x1]
+rcvd [IPCP ConfAck id=0x2 <addr 10.100.84.189> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+Could not determine remote IP address: defaulting to 10.64.64.64
+not replacing existing default route via 192.168.1.1
+local  IP address 10.100.84.189
+remote IP address 10.64.64.64
+primary   DNS address 211.136.17.107
+secondary DNS address 211.136.20.203
+Terminating on signal 15
+Connect time 8.7 minutes.
+Sent 0 bytes, received 0 bytes.
+sent [LCP TermReq id=0x4 "User request"]
+rcvd [LCP TermAck id=0x4]
+Connection terminated.
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /work/mydemo/10-gprs-check/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /work/mydemo/10-gprs-check/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+timeout set to 15 seconds
+abort on (DELAYED)
+abort on (BUSY)
+abort on (ERROR)
+abort on (NO DIALTONE)
+abort on (NO CARRIER)
+timeout set to 15 seconds
+send (rAT^M)
+expect (OK)
+ATAT^M^M
+
+OKOK
+ -- got it
+
+send (ATS0=0^M)
+expect (OK)
+^M
+
+ATS0=0ATS0=0^M^M
+
+OKOK
+ -- got it
+
+send (ATE0V1^M)
+expect (OK)
+^M
+
+ATE0V1ATE0V1^M^M
+
+OKOK
+ -- got it
+
+send (AT+CGDCONT=1,"IP","internet"^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGEQREQ=1,2,128,384,,,0,,,,,,^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATDT*99***1#^M)
+expect (CONNECT)
+^M
+
+^M
+
+CONNECTCONNECT
+ -- got it
+
+Script /work/mydemo/10-gprs-check/ppp/ppp-on-dialer finished (pid 725), status = 0x0
+Serial connection established.
+using channel 9
+Using interface ppp0
+Connect: ppp0 <--> /dev/ttymxc5
+sent [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x5b217f56> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x0 <asyncmap 0x0> <auth chap MD5> <magic 0x1bb3761> <pcomp> <accomp>]
+No auth is possible
+sent [LCP ConfRej id=0x0 <auth chap MD5>]
+rcvd [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x5b217f56> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x1bb3761> <pcomp> <accomp>]
+sent [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x1bb3761> <pcomp> <accomp>]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [LCP DiscReq id=0x2 magic=0x1bb3761]
+rcvd [proto=0x3] 01 00 04
+Unsupported protocol 0x3 received
+sent [LCP ProtRej id=0x2 00 03 01 00 04]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [proto=0x3] 01 00 04
+Unsupported protocol 0x3 received
+sent [LCP ProtRej id=0x3 00 03 01 00 04]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [IPCP ConfReq id=0x0]
+sent [IPCP ConfNak id=0x0 <addr 0.0.0.0>]
+rcvd [IPCP ConfNak id=0x1 <addr 10.56.61.114> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+sent [IPCP ConfReq id=0x2 <addr 10.56.61.114> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+rcvd [IPCP ConfReq id=0x1]
+sent [IPCP ConfAck id=0x1]
+rcvd [IPCP ConfAck id=0x2 <addr 10.56.61.114> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+Could not determine remote IP address: defaulting to 10.64.64.64
+not replacing existing default route via 192.168.1.1
+local  IP address 10.56.61.114
+remote IP address 10.64.64.64
+primary   DNS address 211.136.17.107
+secondary DNS address 211.136.20.203
+Terminating on signal 15
+Connect time 0.2 minutes.
+Sent 0 bytes, received 0 bytes.
+sent [LCP TermReq id=0x4 "User request"]
+rcvd [LCP TermAck id=0x4]
+Connection terminated.
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /work/mydemo/10-gprs-check/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /work/mydemo/10-gprs-check/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+timeout set to 15 seconds
+abort on (DELAYED)
+abort on (BUSY)
+abort on (ERROR)
+abort on (NO DIALTONE)
+abort on (NO CARRIER)
+timeout set to 15 seconds
+send (rAT^M)
+expect (OK)
+alarm
+Failed
+Script /work/mydemo/10-gprs-check/ppp/ppp-on-dialer finished (pid 751), status = 0x3
+Connect script failed
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /work/mydemo/10-gprs-check/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /work/mydemo/10-gprs-check/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+timeout set to 15 seconds
+abort on (DELAYED)
+abort on (BUSY)
+abort on (ERROR)
+abort on (NO DIALTONE)
+abort on (NO CARRIER)
+timeout set to 15 seconds
+send (rAT^M)
+expect (OK)
+ATAT^M^M
+
+OKOK
+ -- got it
+
+send (ATS0=0^M)
+expect (OK)
+^M
+
+ATS0=0ATS0=0^M^M
+
+OKOK
+ -- got it
+
+send (ATE0V1^M)
+expect (OK)
+^M
+
+ATE0V1ATE0V1^M^M
+
+OKOK
+ -- got it
+
+send (AT+CGDCONT=1,"IP","internet"^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGEQREQ=1,2,128,384,,,0,,,,,,^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATDT*99***1#^M)
+expect (CONNECT)
+^M
+
+^M
+
+CONNECTCONNECT
+ -- got it
+
+Script /work/mydemo/10-gprs-check/ppp/ppp-on-dialer finished (pid 768), status = 0x0
+Serial connection established.
+using channel 10
+Using interface ppp0
+Connect: ppp0 <--> /dev/ttymxc5
+sent [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x40db80bf> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x0 <asyncmap 0x0> <auth chap MD5> <magic 0x1989b75> <pcomp> <accomp>]
+No auth is possible
+sent [LCP ConfRej id=0x0 <auth chap MD5>]
+rcvd [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x40db80bf> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x1989b75> <pcomp> <accomp>]
+sent [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x1989b75> <pcomp> <accomp>]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [LCP DiscReq id=0x2 magic=0x1989b75]
+rcvd [proto=0x3] 01 00 04
+Unsupported protocol 0x3 received
+sent [LCP ProtRej id=0x2 00 03 01 00 04]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [proto=0x3] 01 00 04
+Unsupported protocol 0x3 received
+sent [LCP ProtRej id=0x3 00 03 01 00 04]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [IPCP ConfReq id=0x0]
+sent [IPCP ConfNak id=0x0 <addr 0.0.0.0>]
+rcvd [IPCP ConfNak id=0x1 <addr 10.141.117.15> <ms-dns1 183.230.126.225> <ms-dns2 183.230.126.224>]
+sent [IPCP ConfReq id=0x2 <addr 10.141.117.15> <ms-dns1 183.230.126.225> <ms-dns2 183.230.126.224>]
+rcvd [IPCP ConfReq id=0x1]
+sent [IPCP ConfAck id=0x1]
+rcvd [IPCP ConfAck id=0x2 <addr 10.141.117.15> <ms-dns1 183.230.126.225> <ms-dns2 183.230.126.224>]
+Could not determine remote IP address: defaulting to 10.64.64.64
+not replacing existing default route via 192.168.1.1
+local  IP address 10.141.117.15
+remote IP address 10.64.64.64
+primary   DNS address 183.230.126.225
+secondary DNS address 183.230.126.224
+Terminating on signal 15
+Connect time 1.1 minutes.
+Sent 0 bytes, received 0 bytes.
+sent [LCP TermReq id=0x4 "User request"]
+rcvd [LCP TermAck id=0x4]
+Connection terminated.
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /work/mydemo/10-gprs-check/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /work/mydemo/10-gprs-check/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+timeout set to 15 seconds
+abort on (DELAYED)
+abort on (BUSY)
+abort on (ERROR)
+abort on (NO DIALTONE)
+abort on (NO CARRIER)
+timeout set to 15 seconds
+send (rAT^M)
+expect (OK)
+ATAT^M^M
+
+OKOK
+ -- got it
+
+send (ATS0=0^M)
+expect (OK)
+^M
+
+ATS0=0ATS0=0^M^M
+
+OKOK
+ -- got it
+
+send (ATE0V1^M)
+expect (OK)
+^M
+
+ATE0V1ATE0V1^M^M
+
+OKOK
+ -- got it
+
+send (AT+CGDCONT=1,"IP","internet"^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGEQREQ=1,2,128,384,,,0,,,,,,^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATDT*99***1#^M)
+expect (CONNECT)
+^M
+
+^M
+
+CONNECTCONNECT
+ -- got it
+
+Script /work/mydemo/10-gprs-check/ppp/ppp-on-dialer finished (pid 789), status = 0x0
+Serial connection established.
+using channel 11
+Using interface ppp0
+Connect: ppp0 <--> /dev/ttymxc5
+sent [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0xcf9b36fd> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x0 <asyncmap 0x0> <auth chap MD5> <magic 0x19a0e83> <pcomp> <accomp>]
+No auth is possible
+sent [LCP ConfRej id=0x0 <auth chap MD5>]
+rcvd [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0xcf9b36fd> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x19a0e83> <pcomp> <accomp>]
+sent [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x19a0e83> <pcomp> <accomp>]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [LCP DiscReq id=0x2 magic=0x19a0e83]
+rcvd [proto=0x3] 01 00 04
+Unsupported protocol 0x3 received
+sent [LCP ProtRej id=0x2 00 03 01 00 04]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [IPCP ConfReq id=0x0]
+sent [IPCP ConfNak id=0x0 <addr 0.0.0.0>]
+rcvd [IPCP ConfNak id=0x1 <addr 10.41.49.241> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+sent [IPCP ConfReq id=0x2 <addr 10.41.49.241> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+rcvd [IPCP ConfReq id=0x1]
+sent [IPCP ConfAck id=0x1]
+rcvd [IPCP ConfAck id=0x2 <addr 10.41.49.241> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+Could not determine remote IP address: defaulting to 10.64.64.64
+not replacing existing default route via 192.168.1.1
+local  IP address 10.41.49.241
+remote IP address 10.64.64.64
+primary   DNS address 211.136.17.107
+secondary DNS address 211.136.20.203
+Terminating on signal 15
+Connect time 0.3 minutes.
+Sent 0 bytes, received 0 bytes.
+sent [LCP TermReq id=0x3 "User request"]
+rcvd [LCP TermAck id=0x3]
+Connection terminated.
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /work/mydemo/10-gprs-check/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /work/mydemo/10-gprs-check/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+timeout set to 15 seconds
+abort on (DELAYED)
+abort on (BUSY)
+abort on (ERROR)
+abort on (NO DIALTONE)
+abort on (NO CARRIER)
+timeout set to 15 seconds
+send (rAT^M)
+expect (OK)
+ATAT^M^M
+
+OKOK
+ -- got it
+
+send (ATS0=0^M)
+expect (OK)
+^M
+
+ATS0=0ATS0=0^M^M
+
+OKOK
+ -- got it
+
+send (ATE0V1^M)
+expect (OK)
+^M
+
+ATE0V1ATE0V1^M^M
+
+OKOK
+ -- got it
+
+send (AT+CGDCONT=1,"IP","internet"^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGEQREQ=1,2,128,384,,,0,,,,,,^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATDT*99***1#^M)
+expect (CONNECT)
+^M
+
+^M
+
+CONNECTCONNECT
+ -- got it
+
+Script /work/mydemo/10-gprs-check/ppp/ppp-on-dialer finished (pid 808), status = 0x0
+Serial connection established.
+using channel 12
+Using interface ppp0
+Connect: ppp0 <--> /dev/ttymxc5
+sent [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0xe1fb4562> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x0 <asyncmap 0x0> <auth chap MD5> <magic 0x19aa6e5> <pcomp> <accomp>]
+No auth is possible
+sent [LCP ConfRej id=0x0 <auth chap MD5>]
+rcvd [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0xe1fb4562> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x19aa6e5> <pcomp> <accomp>]
+sent [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x19aa6e5> <pcomp> <accomp>]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [LCP DiscReq id=0x2 magic=0x19aa6e5]
+rcvd [proto=0x3] 01 00 04
+Unsupported protocol 0x3 received
+sent [LCP ProtRej id=0x2 00 03 01 00 04]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [proto=0x3] 01 00 04
+Unsupported protocol 0x3 received
+sent [LCP ProtRej id=0x3 00 03 01 00 04]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [IPCP ConfReq id=0x0]
+sent [IPCP ConfNak id=0x0 <addr 0.0.0.0>]
+rcvd [IPCP ConfNak id=0x1 <addr 10.159.222.133> <ms-dns1 120.196.165.7> <ms-dns2 221.179.38.7>]
+sent [IPCP ConfReq id=0x2 <addr 10.159.222.133> <ms-dns1 120.196.165.7> <ms-dns2 221.179.38.7>]
+rcvd [IPCP ConfReq id=0x1]
+sent [IPCP ConfAck id=0x1]
+rcvd [IPCP ConfAck id=0x2 <addr 10.159.222.133> <ms-dns1 120.196.165.7> <ms-dns2 221.179.38.7>]
+Could not determine remote IP address: defaulting to 10.64.64.64
+not replacing existing default route via 192.168.1.1
+local  IP address 10.159.222.133
+remote IP address 10.64.64.64
+primary   DNS address 120.196.165.7
+secondary DNS address 221.179.38.7
+Terminating on signal 15
+Connect time 0.2 minutes.
+Sent 0 bytes, received 0 bytes.
+sent [LCP TermReq id=0x4 "User request"]
+rcvd [LCP TermAck id=0x4]
+Connection terminated.
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /work/mydemo/10-gprs-check/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /work/mydemo/10-gprs-check/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+timeout set to 15 seconds
+abort on (DELAYED)
+abort on (BUSY)
+abort on (ERROR)
+abort on (NO DIALTONE)
+abort on (NO CARRIER)
+timeout set to 15 seconds
+send (rAT^M)
+expect (OK)
+ATAT^M^M
+
+OKOK
+ -- got it
+
+send (ATS0=0^M)
+expect (OK)
+^M
+
+ATS0=0ATS0=0^M^M
+
+OKOK
+ -- got it
+
+send (ATE0V1^M)
+expect (OK)
+^M
+
+ATE0V1ATE0V1^M^M
+
+OKOK
+ -- got it
+
+send (AT+CGDCONT=1,"IP","internet"^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGEQREQ=1,2,128,384,,,0,,,,,,^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATDT*99***1#^M)
+expect (CONNECT)
+^M
+
+^M
+
+CONNECTCONNECT
+ -- got it
+
+Script /work/mydemo/10-gprs-check/ppp/ppp-on-dialer finished (pid 838), status = 0x0
+Serial connection established.
+using channel 13
+Using interface ppp0
+Connect: ppp0 <--> /dev/ttymxc5
+sent [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0xb331111b> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x0 <asyncmap 0x0> <auth chap MD5> <magic 0x19c393c> <pcomp> <accomp>]
+No auth is possible
+sent [LCP ConfRej id=0x0 <auth chap MD5>]
+rcvd [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0xb331111b> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x19c393c> <pcomp> <accomp>]
+sent [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x19c393c> <pcomp> <accomp>]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [LCP DiscReq id=0x2 magic=0x19c393c]
+rcvd [IPCP ConfReq id=0x0]
+sent [IPCP ConfNak id=0x0 <addr 0.0.0.0>]
+rcvd [IPCP ConfNak id=0x1 <addr 10.124.211.82> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+sent [IPCP ConfReq id=0x2 <addr 10.124.211.82> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+rcvd [IPCP ConfReq id=0x1]
+sent [IPCP ConfAck id=0x1]
+rcvd [IPCP ConfAck id=0x2 <addr 10.124.211.82> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+Could not determine remote IP address: defaulting to 10.64.64.64
+not replacing existing default route via 192.168.1.1
+local  IP address 10.124.211.82
+remote IP address 10.64.64.64
+primary   DNS address 211.136.17.107
+secondary DNS address 211.136.20.203
+Terminating on signal 15
+Connect time 3.7 minutes.
+Sent 0 bytes, received 0 bytes.
+sent [LCP TermReq id=0x2 "User request"]
+rcvd [LCP TermAck id=0x2]
+Connection terminated.
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /work/mydemo/10-gprs-check/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /work/mydemo/10-gprs-check/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+timeout set to 15 seconds
+abort on (DELAYED)
+abort on (BUSY)
+abort on (ERROR)
+abort on (NO DIALTONE)
+abort on (NO CARRIER)
+timeout set to 15 seconds
+send (rAT^M)
+expect (OK)
+ATAT^M^M
+
+OKOK
+ -- got it
+
+send (ATS0=0^M)
+expect (OK)
+^M
+
+ATS0=0ATS0=0^M^M
+
+OKOK
+ -- got it
+
+send (ATE0V1^M)
+expect (OK)
+^M
+
+ATE0V1ATE0V1^M^M
+
+OKOK
+ -- got it
+
+send (AT+CGDCONT=1,"IP","internet"^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGEQREQ=1,2,128,384,,,0,,,,,,^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATDT*99***1#^M)
+expect (CONNECT)
+^M
+
+^M
+
+CONNECTCONNECT
+ -- got it
+
+Script /work/mydemo/10-gprs-check/ppp/ppp-on-dialer finished (pid 863), status = 0x0
+Serial connection established.
+using channel 14
+Using interface ppp0
+Connect: ppp0 <--> /dev/ttymxc5
+sent [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0xfa5ae956> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x0 <asyncmap 0x0> <auth chap MD5> <magic 0x19ffc7b> <pcomp> <accomp>]
+No auth is possible
+sent [LCP ConfRej id=0x0 <auth chap MD5>]
+rcvd [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0xfa5ae956> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x19ffc7b> <pcomp> <accomp>]
+sent [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x19ffc7b> <pcomp> <accomp>]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [LCP DiscReq id=0x2 magic=0x19ffc7b]
+rcvd [proto=0x3] 01 00 04
+Unsupported protocol 0x3 received
+sent [LCP ProtRej id=0x2 00 03 01 00 04]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [proto=0x3] 01 00 04
+Unsupported protocol 0x3 received
+sent [LCP ProtRej id=0x3 00 03 01 00 04]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [proto=0x3] 01 00 04
+Unsupported protocol 0x3 received
+sent [LCP ProtRej id=0x4 00 03 01 00 04]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [proto=0x3] 01 00 04
+Unsupported protocol 0x3 received
+sent [LCP ProtRej id=0x5 00 03 01 00 04]
+Terminating on signal 2
+sent [LCP TermReq id=0x6 "User request"]
+rcvd [LCP TermAck id=0x6]
+Connection terminated.
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /work/mydemo/10-gprs-check/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /work/mydemo/10-gprs-check/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+timeout set to 15 seconds
+abort on (DELAYED)
+abort on (BUSY)
+abort on (ERROR)
+abort on (NO DIALTONE)
+abort on (NO CARRIER)
+timeout set to 15 seconds
+send (rAT^M)
+expect (OK)
+ATAT^M^M
+
+OKOK
+ -- got it
+
+send (ATS0=0^M)
+expect (OK)
+^M
+
+ATS0=0ATS0=0^M^M
+
+OKOK
+ -- got it
+
+send (ATE0V1^M)
+expect (OK)
+^M
+
+ATE0V1ATE0V1^M^M
+
+OKOK
+ -- got it
+
+send (AT+CGDCONT=1,"IP","internet"^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGEQREQ=1,2,128,384,,,0,,,,,,^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATDT*99***1#^M)
+expect (CONNECT)
+^M
+
+^M
+
+CONNECTCONNECT
+ -- got it
+
+Script /work/mydemo/10-gprs-check/ppp/ppp-on-dialer finished (pid 886), status = 0x0
+Serial connection established.
+using channel 15
+Using interface ppp0
+Connect: ppp0 <--> /dev/ttymxc5
+sent [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x8f50e015> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x0 <asyncmap 0x0> <auth chap MD5> <magic 0x1a0b8b4> <pcomp> <accomp>]
+No auth is possible
+sent [LCP ConfRej id=0x0 <auth chap MD5>]
+rcvd [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x8f50e015> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x1a0b8b4> <pcomp> <accomp>]
+sent [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x1a0b8b4> <pcomp> <accomp>]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [LCP DiscReq id=0x2 magic=0x1a0b8b4]
+rcvd [proto=0x3] 01 00 04
+Unsupported protocol 0x3 received
+sent [LCP ProtRej id=0x2 00 03 01 00 04]
+rcvd [IPCP ConfReq id=0x0]
+sent [IPCP ConfNak id=0x0 <addr 0.0.0.0>]
+rcvd [IPCP ConfNak id=0x1 <addr 10.123.122.227> <ms-dns1 120.196.165.7> <ms-dns2 221.179.38.7>]
+sent [IPCP ConfReq id=0x2 <addr 10.123.122.227> <ms-dns1 120.196.165.7> <ms-dns2 221.179.38.7>]
+rcvd [IPCP ConfReq id=0x1]
+sent [IPCP ConfAck id=0x1]
+rcvd [IPCP ConfAck id=0x2 <addr 10.123.122.227> <ms-dns1 120.196.165.7> <ms-dns2 221.179.38.7>]
+Could not determine remote IP address: defaulting to 10.64.64.64
+not replacing existing default route via 192.168.1.1
+local  IP address 10.123.122.227
+remote IP address 10.64.64.64
+primary   DNS address 120.196.165.7
+secondary DNS address 221.179.38.7
+Terminating on signal 15
+Connect time 0.4 minutes.
+Sent 0 bytes, received 0 bytes.
+sent [LCP TermReq id=0x3 "User request"]
+rcvd [LCP TermAck id=0x3]
+Connection terminated.
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /work/mydemo/10-gprs-check/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /work/mydemo/10-gprs-check/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+timeout set to 15 seconds
+abort on (DELAYED)
+abort on (BUSY)
+abort on (ERROR)
+abort on (NO DIALTONE)
+abort on (NO CARRIER)
+timeout set to 15 seconds
+send (rAT^M)
+expect (OK)
+ATAT^M^M
+
+OKOK
+ -- got it
+
+send (ATS0=0^M)
+expect (OK)
+^M
+
+ATS0=0ATS0=0^M^M
+
+OKOK
+ -- got it
+
+send (ATE0V1^M)
+expect (OK)
+^M
+
+ATE0V1ATE0V1^M^M
+
+OKOK
+ -- got it
+
+send (AT+CGDCONT=1,"IP","internet"^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGEQREQ=1,2,128,384,,,0,,,,,,^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATDT*99***1#^M)
+expect (CONNECT)
+^M
+
+^M
+
+CONNECTCONNECT
+ -- got it
+
+Script /work/mydemo/10-gprs-check/ppp/ppp-on-dialer finished (pid 906), status = 0x0
+Serial connection established.
+using channel 16
+Using interface ppp0
+Connect: ppp0 <--> /dev/ttymxc5
+sent [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0xf985e282> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x0 <asyncmap 0x0> <auth chap MD5> <magic 0x1a18180> <pcomp> <accomp>]
+No auth is possible
+sent [LCP ConfRej id=0x0 <auth chap MD5>]
+rcvd [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0xf985e282> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x1a18180> <pcomp> <accomp>]
+sent [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x1a18180> <pcomp> <accomp>]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [LCP DiscReq id=0x2 magic=0x1a18180]
+rcvd [IPCP ConfReq id=0x0]
+sent [IPCP ConfNak id=0x0 <addr 0.0.0.0>]
+rcvd [IPCP ConfNak id=0x1 <addr 10.205.41.39> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+sent [IPCP ConfReq id=0x2 <addr 10.205.41.39> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+rcvd [IPCP ConfReq id=0x1]
+sent [IPCP ConfAck id=0x1]
+rcvd [IPCP ConfAck id=0x2 <addr 10.205.41.39> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+Could not determine remote IP address: defaulting to 10.64.64.64
+not replacing existing default route via 192.168.1.1
+local  IP address 10.205.41.39
+remote IP address 10.64.64.64
+primary   DNS address 211.136.17.107
+secondary DNS address 211.136.20.203
+Terminating on signal 15
+Connect time 0.3 minutes.
+Sent 0 bytes, received 0 bytes.
+sent [LCP TermReq id=0x2 "User request"]
+rcvd [LCP TermAck id=0x2]
+Connection terminated.
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /work/mydemo/10-gprs-check/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /work/mydemo/10-gprs-check/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+timeout set to 15 seconds
+abort on (DELAYED)
+abort on (BUSY)
+abort on (ERROR)
+abort on (NO DIALTONE)
+abort on (NO CARRIER)
+timeout set to 15 seconds
+send (rAT^M)
+expect (OK)
+ATAT^M^M
+
+OKOK
+ -- got it
+
+send (ATS0=0^M)
+expect (OK)
+^M
+
+ATS0=0ATS0=0^M^M
+
+OKOK
+ -- got it
+
+send (ATE0V1^M)
+expect (OK)
+^M
+
+ATE0V1ATE0V1^M^M
+
+OKOK
+ -- got it
+
+send (AT+CGDCONT=1,"IP","internet"^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (AT+CGEQREQ=1,2,128,384,,,0,,,,,,^M)
+expect (OK)
+^M
+
+^M
+
+OKOK
+ -- got it
+
+send (ATDT*99***1#^M)
+expect (CONNECT)
+^M
+
+^M
+
+CONNECTCONNECT
+ -- got it
+
+Script /work/mydemo/10-gprs-check/ppp/ppp-on-dialer finished (pid 925), status = 0x0
+Serial connection established.
+using channel 17
+Using interface ppp0
+Connect: ppp0 <--> /dev/ttymxc5
+sent [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x1b23ab29> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x0 <asyncmap 0x0> <auth chap MD5> <magic 0x1a22c06> <pcomp> <accomp>]
+No auth is possible
+sent [LCP ConfRej id=0x0 <auth chap MD5>]
+rcvd [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x1b23ab29> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x1a22c06> <pcomp> <accomp>]
+sent [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x1a22c06> <pcomp> <accomp>]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [LCP DiscReq id=0x2 magic=0x1a22c06]
+rcvd [proto=0x3] 01 00 04
+Unsupported protocol 0x3 received
+sent [LCP ProtRej id=0x2 00 03 01 00 04]
+sent [IPCP ConfReq id=0x1 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+rcvd [proto=0x3] 01 00 04
+Unsupported protocol 0x3 received
+sent [LCP ProtRej id=0x3 00 03 01 00 04]
+rcvd [IPCP ConfReq id=0x0]
+sent [IPCP ConfNak id=0x0 <addr 0.0.0.0>]
+rcvd [IPCP ConfNak id=0x1 <addr 10.139.48.115> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+sent [IPCP ConfReq id=0x2 <addr 10.139.48.115> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+rcvd [IPCP ConfReq id=0x1]
+sent [IPCP ConfAck id=0x1]
+rcvd [IPCP ConfAck id=0x2 <addr 10.139.48.115> <ms-dns1 211.136.17.107> <ms-dns2 211.136.20.203>]
+Could not determine remote IP address: defaulting to 10.64.64.64
+not replacing existing default route via 192.168.1.1
+local  IP address 10.139.48.115
+remote IP address 10.64.64.64
+primary   DNS address 211.136.17.107
+secondary DNS address 211.136.20.203
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /mnt/Gpio/finally2/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /mnt/Gpio/finally2/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+sh: /mnt/Gpio/finally2/ppp/ppp-on-dialer: Permission denied
+Script /mnt/Gpio/finally2/ppp/ppp-on-dialer finished (pid 356), status = 0x7e
+Connect script failed
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /mnt/Gpio/finally2/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /mnt/Gpio/finally2/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+sh: /mnt/Gpio/finally2/ppp/ppp-on-dialer: Permission denied
+Script /mnt/Gpio/finally2/ppp/ppp-on-dialer finished (pid 229), status = 0x7e
+Connect script failed
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /mnt/Gpio/finally2/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /mnt/Gpio/finally2/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+sh: /mnt/Gpio/finally2/ppp/ppp-on-dialer: Permission denied
+Script /mnt/Gpio/finally2/ppp/ppp-on-dialer finished (pid 314), status = 0x7e
+Connect script failed
+pppd options in effect:
+debug		# (from command line)
+nodetach		# (from command line)
+logfile /mnt/Gpio/finally2/test/ppp/ppplog		# (from command line)
+dump		# (from command line)
+noauth		# (from command line)
+refuse-chap		# (from command line)
+refuse-mschap		# (from command line)
+refuse-mschap-v2		# (from command line)
+remotename 3gppp		# (from command line)
+/dev/ttymxc5		# (from command line)
+115200		# (from command line)
+connect /mnt/Gpio/finally2/test/ppp/ppp-on-dialer		# (from command line)
+local		# (from command line)
+hide-password		# (from command line)
+novj		# (from command line)
+novjccomp		# (from command line)
+ipcp-accept-local		# (from command line)
+ipcp-accept-remote		# (from command line)
+ipparam 3gppp		# (from command line)
+noipdefault		# (from command line)
+defaultroute		# (from command line)
+usepeerdns		# (from command line)
+noccp		# (from command line)
+sh: /mnt/Gpio/finally2/test/ppp/ppp-on-dialer: Permission denied
+Script /mnt/Gpio/finally2/test/ppp/ppp-on-dialer finished (pid 219), status = 0x7e
+Connect script failed
